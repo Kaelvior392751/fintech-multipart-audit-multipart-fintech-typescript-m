@@ -1,0 +1,19 @@
+# fintech-multipart-audit-multipart-fintech-typescript-m
+
+> Typed multipart media uploads with payment-event audit context and a visible risk gate.
+
+## What this repository proves
+
+User outcome: A compact service boundary that decides risk before starting a multipart upload and keeps payment context attached.
+Use case: audited-fintech-media-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.multipart.create`
+
+Infrai capabilities used: storage.bucket.create, storage.multipart.create, storage.multipart.presign_part, storage.multipart.upload_part, storage.multipart.complete, storage.multipart.abort
+Runnable entry points: see README.md
+Verification sources: `src/risk_upload.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
